@@ -1,6 +1,4 @@
 'use client';
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import Stepper, { Step } from "@/components/Stepper"
 import Image from "next/image";
 
