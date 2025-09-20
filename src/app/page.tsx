@@ -61,7 +61,7 @@ export default function Home() {
               exit={{scale: 0.8, opacity: 0}}
               transition={{duration: 0.3, ease: "easeIn"}}>
 
-              <h3 className="text-2xl font-bold">Welcome To the 90's</h3>
+              <h3 className="text-2xl font-bold">Welcome To the 90&apos;s</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Place Where You Explore the Past
               </p>
