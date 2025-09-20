@@ -1,19 +1,75 @@
+'use client';
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Stepper, { Step } from "@/components/Stepper"
+import Image from "next/image";
+
+import rickroll from '@/image/rickroll_qr.png'
 
 export default function Ticket() {
+
     return(
-        <div className="relative h-screen">
+        <Stepper
+            backButtonText="Previous"
+            nextButtonText="Next"
+            initialStep={1}
+            disableStepIndicators={true}
+        >
+            <Step>
+                <div className="grid gap-3">
 
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-7">
-                <h1 className="text-xl md:text-5xl font-bold">404 NOT FOUND!</h1>
-                <p className="text-lg md:text-2xl font-semibold">This Page is Not Ready Yet!</p>
+                    <div className="flex flex-col flex-1 gap-2">
+                        <h2>Full Name</h2>
+                        <input 
+                        type="text" 
+                        placeholder="Himura Kenshin"
+                        className="border border-solid border-gray-900 p-2 rounded-lg dark:border-gray-100"  
+                        />
+                    </div>
 
-                <Button>
-                    <Link href={'/'}>Homepage</Link>
-                </Button>
-            </div>
-        </div>
+                    <div className="flex flex-col flex-1 gap-2">
+                        <h2>NIM</h2>
+                        <input 
+                        type="text" 
+                        placeholder="2406012xxxxxxx"
+                        className="border border-solid border-gray-900 p-2 rounded-lg dark:border-gray-100"
+                        />
+                    </div>
 
+                    <div className="flex flex-col flex-1 gap-2">
+                        <h2>Email</h2>
+                        <input 
+                        type="email" 
+                        placeholder="youremail@mail.com"
+                        className="border border-solid border-gray-900 p-2 rounded-lg dark:border-gray-100" 
+                        />
+                    </div>
+
+                </div>
+
+            </Step>
+
+            <Step>
+                <div className="space-y-4">
+                    <h2 className="text-center text-2xl font-bold">Pay With Your E-Wallet!</h2>
+
+                    <Image
+                        src={rickroll}
+                        alt="payment qr"
+                    />
+                 </div>
+            </Step>
+
+            <Step>
+                <div className="flex flex-col space-y-5">
+                    <h2
+                        className="text-center text-3xl font-bold"
+                    >Payment Success!</h2>
+                    <p
+                        className="text-center font-semibold"
+                    >Check Your Email For the Ticket</p>
+                </div>
+            </Step>
+        </Stepper>
     )
 }
