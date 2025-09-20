@@ -3,12 +3,10 @@
 import Link from "next/link"
 import { IoMoon } from "react-icons/io5"
 import { FaSun } from "react-icons/fa6"
-import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 
 export default function Navbar() {
-  const currentPath = usePathname()
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
