@@ -17,6 +17,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "I-Gate 2025",
   description: "Informatics Gathering 2025!",
+  keywords: [
+    "informatika",
+    "undip",
+    "hmif",
+    "igate",
+    "igate2025"
+  ]
 };
 
 export default function RootLayout({
@@ -31,7 +38,7 @@ export default function RootLayout({
       >
         <Providers>
           <Navbar />
-          <main className="pt-20 px-6">{children}</main>
+          <main className="pt-20">{children}</main>
         </Providers>
       </body>
     </html>
